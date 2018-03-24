@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="#" th:action="@{/calcular}" th:object="${automovil}"
+		method="post">
+
+		<table>
+			<tr>
+				<th>Nombre</th>
+				<th><input type="text" th:field="*{nombre}" /></th>
+			</tr>
+			<tr>
+				<th>Recorrido</th>
+				<th><input type="number" th:field="*{recorrido}" /></th>
+			</tr>
+			<tr>
+				<th>Vehiculo</th>
+				<th>
+					<select th:field="*{marca}">
+						<option th:value="marca1" >Marca 1</option>
+						<option th:value="marca2" >Marca 2</option>
+						<option th:value="marca3" >Marca 3</option>
+					</select>
+				</th>
+			</tr>
+			<tr>
+				<th colspan="2">
+					<input type="submit" value="Calcular">
+				</th>
+			</tr>
+		</table>
+
+
+	</form>
+</body>
+</html>
