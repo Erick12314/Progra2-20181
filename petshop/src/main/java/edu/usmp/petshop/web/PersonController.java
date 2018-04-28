@@ -2,6 +2,7 @@ package edu.usmp.petshop.web;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import javax.validation.Valid;
@@ -24,7 +25,7 @@ public class PersonController {
 	private PersonRepository personRepository;
 
 	@GetMapping("/new")
-	public String initCreationForm(Model model) {
+	public String initCreationForm(Model model,Locale locale) {
 		model.addAttribute("person", new Person());
 		return "personForm";
 	}
