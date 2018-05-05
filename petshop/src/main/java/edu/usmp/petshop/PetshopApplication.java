@@ -18,6 +18,8 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 @SpringBootApplication
 public class PetshopApplication extends WebMvcConfigurerAdapter{
 	
+	// PARA TESTEAR LENGUAJES USAR UN GET ?LANG=ES_PE O ?LANG=EN_US
+	
     @Bean
     public MessageSource messageSource() {
         ReloadableResourceBundleMessageSource msgSrc = new ReloadableResourceBundleMessageSource();

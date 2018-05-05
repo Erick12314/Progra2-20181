@@ -2,37 +2,39 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Enter Person</title>
 </head>
 <body>
 
 
 <form action="#" th:action="@{/new}" th:object="${person}" method="post">
+
+	<h2><p th:text="#{personFormTitle}"/></h2>
+
 	<table>
 		
 		<tr>
-			<td>Nombre:</td>
+			<td><p th:text="#{personFormLabel.nombre}"/></td>
 			<td><input type="text" th:field="*{firstName}"/></td>
 			<td th:if="${#fields.hasErrors('firstName')}"
 			    th:errors="*{firstName}">Nombre Error</td>
 		</tr>
 		
 		<tr>
-			<td>Apellido:</td>
+			<td><p th:text="#{personFormLabel.apellido}"/></td>
 			<td><input type="text" th:field="*{lastName}"/></td>
 			<td th:if="${#fields.hasErrors('lastName')}"
 			    th:errors="*{lastName}">Apellido Error</td>
 		</tr>
 
 		<tr>
-			<td>Direccion:</td>
+			<td><p th:text="#{personFormLabel.direccion}"/></td>
 			<td><input type="text" th:field="*{address}"/></td>
 			<td th:if="${#fields.hasErrors('address')}"
 			    th:errors="*{address}">Direccion Error</td>
 		</tr>
 
 		<tr>
-			<td>Ciudad:</td>
+			<td><p th:text="#{personFormLabel.ciudad}"/></td>
 			<td><input type="text" th:field="*{city}"/></td>
 			<td th:if="${#fields.hasErrors('city')}"
 			    th:errors="*{city}">Ciudad Error</td>
@@ -40,7 +42,7 @@
 
 
 		<tr>
-			<td>Telefono:</td>
+			<td><p th:text="#{personFormLabel.telefono}"/></td>
 			<td><input type="text" th:field="*{phone}"/></td>
 			<td th:if="${#fields.hasErrors('phone')}"
 			    th:errors="*{phone}">Telefono Error</td>
